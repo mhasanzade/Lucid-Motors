@@ -1,0 +1,42 @@
+.stay-updated{
+    background-color: transparent;
+    color: white;
+    width: 130px;
+    height: 50px;
+    z-index: 1;
+    
+    border: 2px solid white;
+    position: relative;
+    transition: .5s ease;
+    &::before{
+        content: " ";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        z-index: -1;
+        border: none;
+        height: 100%;
+        background: white;
+        
+        transition: transform .6s ease;
+        
+        transform-origin:left;
+        transform: scaleX(0);
+
+    }
+    &:hover::before{
+        transform-origin: right;
+        transform: scaleX(1);
+        // color: black;
+        
+    }
+    &:hover{
+        color: #40423f;
+        // z-index: 2;
+    }
+   
+
+}

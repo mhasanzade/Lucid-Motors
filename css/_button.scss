@@ -1,0 +1,81 @@
+.button-air{
+    background-color: transparent;
+    
+    width: 180px;
+    height: 60px;
+    
+    border: none;
+    
+    transition: .6s ease;
+    
+    color: #40423f;
+    z-index: 1;
+    background: white;
+    position: relative;
+    &::before{
+        content: " ";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        z-index: -1;
+        border: none;
+        height: 100%;
+        background: #c2b299;
+        
+        transition: transform .6s ease;
+        
+        transform-origin:left;
+        transform: scaleX(0);
+
+    }
+    &:hover::before{
+        transform-origin: right;
+        transform: scaleX(1);
+        // color: black;
+        
+    }
+    &:hover{
+        color: white;
+        // z-index: 2;
+    }
+
+}
+
+.line{
+    text-decoration: none;
+    color: white;
+    position: relative;
+    animation: fadeInUp;
+    animation-duration: 2s;
+    &:hover{
+        text-decoration: none;
+        color: white;
+    }
+    &::before{
+        content: " ";
+        position: absolute;
+        left: 0;
+        // top: 0;
+        bottom: 0;
+        right: 0;
+        height: .8px;
+        background: white;
+        transition: transform .3s ease;
+        transform-origin: bottom left;
+        transform: scaleX(0);
+        // background: linear-gradient(to right, transparent 50%, white 50%) left;
+        // background-size: 200%;
+        // background-position: left;
+        // transition: 300ms ease;
+        
+    }
+    &:hover::before{
+        // background-position: right;
+        transform-origin: bottom right;
+        transform: scaleX(1);
+    }
+
+}
